@@ -1,17 +1,35 @@
 {
-  "name": "infinityjs",
-  "module": "index.ts",
-  "type": "module",
+  "name": "@infinitepay/js",
+  "version": "1.0.0",
+  "description": "SDK JavaScript para integração com o InfinitePay Checkout",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "vitest"
+    "build": "tsc",
+    "test": "vitest",
+    "prepare": "npm run build"
   },
+  "keywords": [
+    "infinitepay",
+    "payment",
+    "checkout",
+    "sdk"
+  ],
+  "author": "InfinitePay",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinitepay/js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/infinitepay/js/issues"
+  },
+  "homepage": "https://github.com/infinitepay/js#readme",
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
+    "typescript": "^5.0.0",
     "vitest": "^3.1.2"
   }
 }
