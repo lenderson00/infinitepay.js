@@ -1,6 +1,6 @@
 {
   "name": "@infinitepay/js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "SDK JavaScript para integração com o InfinitePay Checkout",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
