@@ -1,68 +1,68 @@
 /**
- * Represents an item in the checkout process.
+ * Representa um item no processo de checkout.
  * @interface Item
  */
 interface Item {
-  /** The name of the item */
+  /** Nome do item */
   name: string;
-  /** The price of the item */
+  /** Preço do item */
   price: number;
-  /** The quantity of the item */
+  /** Quantidade do item */
   quantity: number;
 }
 
 /**
- * Customer information for the checkout process.
+ * Informações do cliente para o processo de checkout.
  * @interface CustomerInfo
  */
 interface CustomerInfo {
-  /** The name of the customer */
+  /** Nome do cliente */
   customer_name?: string;
-  /** The email of the customer */
+  /** Email do cliente */
   customer_email?: string;
-  /** The cellphone number of the customer */
+  /** Número de celular do cliente */
   customer_cellphone?: string;
-  /** The CEP (postal code) of the customer's address */
+  /** CEP do endereço do cliente */
   address_cep?: string;
-  /** Additional address information */
+  /** Informações complementares do endereço */
   address_complement?: string;
-  /** The street number of the customer's address */
+  /** Número do endereço do cliente */
   address_number?: string;
 }
 
 /**
- * Parameters required to build the checkout URL.
+ * Parâmetros necessários para construir a URL de checkout.
  * @interface BuildUrlParams
  */
 interface BuildUrlParams {
-  /** Array of items to be purchased */
+  /** Array de itens a serem comprados */
   items: Item[];
-  /** Unique order identifier */
+  /** Identificador único do pedido */
   order_nsu: string;
-  /** URL to redirect to after checkout completion */
+  /** URL para redirecionamento após a conclusão do checkout */
   redirect_url: string;
-  /** Optional customer information */
+  /** Informações opcionais do cliente */
   customer?: CustomerInfo;
 }
 
 /**
- * Main class for interacting with the Infinity Pay checkout system.
+ * Classe principal para interação com o sistema de checkout Infinity Pay.
  * @class InfinityJS
  */
 export class InfinityJS {
-  /** Base URL for the Infinity Pay checkout system */
+  /** URL base para o sistema de checkout Infinity Pay */
   private BASE_URL = "https://checkout.infinitepay.io";
 
   /**
-   * Creates an instance of InfinityJS.
-   * @param {string} handle - The merchant handle for authentication
+   * Cria uma instância de InfinityJS.
+   * @param {string} handle - O identificador do comerciante para autenticação "infiniteTag"
    */
   constructor(private readonly handle: string) {}
 
   /**
-   * Builds a URL for the Infinity Pay checkout process.
-   * @param {BuildUrlParams} params - Parameters for building the checkout URL
-   * @returns {string} The complete checkout URL
+   * Constrói uma URL para o processo de checkout do Infinity Pay.
+   * @param {BuildUrlParams} params - Parâmetros para construir a URL de checkout
+   * @returns {string} A URL completa de checkout
    */
   buildUrl(params: BuildUrlParams): string {
     const { items, order_nsu, redirect_url, customer } = params;
