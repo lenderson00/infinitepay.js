@@ -22,12 +22,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/infinitepay/js.git"
+    "url": "git+https://github.com/lenderson00/infinitepay.js.git"
   },
   "bugs": {
-    "url": "https://github.com/infinitepay/js/issues"
+    "url": "https://github.com/lenderson00/infinitepay.js/issues"
   },
-  "homepage": "https://github.com/infinitepay/js#readme",
+  "homepage": "https://github.com/lenderson00/infinitepay.js#readme",
   "devDependencies": {
     "typescript": "^5.0.0",
     "vitest": "^3.1.2"
